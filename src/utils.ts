@@ -244,9 +244,10 @@ export function generateCoverHtml(
  * Generates a table of contents (TOC) HTML and modifies the content HTML by replacing header tags with updated header IDs.
  * @param contentHtml - The content HTML string.
  * @param maxLevel - The maximum header level to include in the TOC. Defaults to 3.
+ * @param tocTitle - Change the title of table of contents.
  * @returns An object containing the modified content HTML and the TOC HTML.
  */
-export function generateToc(contentHtml: string, maxLevel = 4) {
+export function generateToc(contentHtml: string,tocTitle?: string, maxLevel = 4) {
   const headers: Array<{
     header: string;
     level: number;
@@ -271,7 +272,7 @@ export function generateToc(contentHtml: string, maxLevel = 4) {
     return replaceHeader(matchedStr, headerId, maxLevel);
   }
 
-  const tocHTML = generateTocHtml(headers);
+  const tocHTML = generateTocHtml(headers, tocTitle);
 
   return { modifiedContentHTML, tocHTML };
 }
@@ -279,9 +280,10 @@ export function generateToc(contentHtml: string, maxLevel = 4) {
 /**
  * Generates the HTML code for a table of contents based on the provided headers.
  * @param headers - An array of header objects containing level, id, and header properties.
+ *  * @param tocTitle - Change the title of table of contents.
  * @returns The HTML code for the table of contents.
  */
-export function generateTocHtml(headers: any[]) {
+export function generateTocHtml(headers: any[], tocTitle?: string) {
   // Map the headers array to create a list item for each header with the appropriate indentation
   const toc = headers
     .map(
@@ -294,7 +296,7 @@ export function generateTocHtml(headers: any[]) {
   // Return the HTML code for the table of contents
   return `
   <div class="toc-page" style="page-break-after: always;">
-    <h1 class="toc-header">Table of contents:</h1>
+    <h1 class="toc-header">${tocTitle ? tocTitle : 'Sumário'}</h1>
     ${toc}
   </div>
   `;

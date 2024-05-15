@@ -23,8 +23,8 @@
     "docusaurus",
     "gitbook"
   ],
-  "homepage": "https://github.com/jean-humann/docs-to-pdf",
-  "author": "Jean Humann <jean.humann@gmail.com> (https://github.com/jean-humann)",
+  "homepage": "https://github.com/westorres9/docs-to-pdf",
+  "author": "Wester Torres <wester.torres9@gmail.com> (https://github.com/westorres9)",
   "license": "MIT",
   "dependencies": {
     "@types/fs-extra": "^11.0.1",
