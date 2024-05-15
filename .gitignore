@@ -1,6 +1,5 @@
 node_modules
 yarn-error.log
-lib/
 .history
 .vscode
 .DS_Store
