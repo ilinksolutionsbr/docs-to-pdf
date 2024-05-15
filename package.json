@@ -16,7 +16,7 @@
     "node": ">=18.0.0"
   },
   "bin": {
-    "docs-to-pdf": "lib/cli.js"
+    "fs-docs-to-pdf": "lib/cli.js"
   },
   "keywords": [
     "pdf",
