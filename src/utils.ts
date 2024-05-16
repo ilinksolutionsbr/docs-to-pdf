@@ -296,7 +296,7 @@ export function generateTocHtml(headers: any[], tocTitle?: string) {
   // Return the HTML code for the table of contents
   return `
   <div class="toc-page" style="page-break-after: always;">
-    <h1 class="toc-header">${tocTitle ? tocTitle : 'Sumário'}</h1>
+    <h1 class="toc-header">${tocTitle ? tocTitle : 'Table of Contents'}</h1>
     ${toc}
   </div>
   `;

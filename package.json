@@ -1,5 +1,5 @@
 {
-  "name": "fs-docs-to-pdf",
+  "name": "docs-to-pdf",
   "version": "0.6.2",
   "description": "Generate PDF from Docusaurus",
   "main": "lib/cli.js",
@@ -16,15 +16,15 @@
     "node": ">=18.0.0"
   },
   "bin": {
-    "fs-docs-to-pdf": "lib/cli.js"
+    "docs-to-pdf": "lib/cli.js"
   },
   "keywords": [
     "pdf",
     "docusaurus",
     "gitbook"
   ],
-  "homepage": "https://github.com/westorres9/docs-to-pdf",
-  "author": "Wester Torres <wester.torres9@gmail.com> (https://github.com/westorres9)",
+  "homepage": "https://github.com/jean-humann/docs-to-pdf",
+  "author": "Jean Humann <jean.humann@gmail.com> (https://github.com/jean-humann)",
   "license": "MIT",
   "dependencies": {
     "@types/fs-extra": "^11.0.1",
