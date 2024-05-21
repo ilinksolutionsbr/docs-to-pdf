@@ -290,7 +290,7 @@ export function generateTocHtml(headers: any[], tocTitle?: string) {
     .map(
       (header) =>
         `<li class="toc-item toc-item-${header.level}" style="margin-left:${
-          (header.level - 1) * 30
+          (header.level - 1) * 40
         }px"><a href="#${header.id}" class=${header.level == 2 ? 'style="font-weight:bold"' : ''}>${header.header}</a></li>`,
     )
     .join('\n');
