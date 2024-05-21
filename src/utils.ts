@@ -289,9 +289,7 @@ export function generateTocHtml(headers: any[], tocTitle?: string) {
   const toc = headers
     .map(
       (header) =>
-        `<li class="toc-item toc-item-${header.level}" style="margin-left:${
-          (header.level - 1) * 20
-        }px"><a href="#${header.id}"><span>${header.level == 2 ? '': header.level == 3 ? '.......' : '............' }</span>${header.header}</a></li>`,
+        `<li class="toc-item toc-item-${header.level}"><span style="margin-rigth: 10px">${header.level == 2 ? '': header.level == 3 ? '.......' : '............' }</span>${header.header}</a></li>`,
     )
     .join('\n');
   // Return the HTML code for the table of contents
